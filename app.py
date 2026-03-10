@@ -95,7 +95,7 @@ def outfit_image():
                 break
         if not matched:
             matched = fallback_ids[idx]   # fallback
-        return fetch_image(f"https://iconapi.wasmer.app/{matched}")
+        return fetch_image(f"https://item-info-ldp1.vercel.app/icon?item_id={matched}")
 
     # ---- Fetch outfit images concurrently ----
     futures = [executor.submit(get_outfit, i, c) for i, c in enumerate(required_starts)]
